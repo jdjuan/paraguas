@@ -212,7 +212,7 @@
 // $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2)
 
 //** `.form-group` margin
-$form-group-margin-bottom:       22px;
+// $form-group-margin-bottom:       15px
 
 // $legend-color:                   $gray-dark
 // $legend-border-color:            #e5e5e5
@@ -295,7 +295,7 @@ $form-group-margin-bottom:       22px;
 
 // Medium screen / desktop
 //** Deprecated `$screen-md` as of v3.0.1
-$screen-md:                    $circlesColliding
+// $screen-md:                  992px
 // $screen-md-min:              $screen-md
 //** Deprecated `$screen-desktop` as of v3.0.1
 // $screen-desktop:             $screen-md-min

@@ -17,23 +17,34 @@
   }
 }
 
-@mixin ieCenterer(){
-  margin-left: auto;
-  margin-right: auto;
-}
-
 @mixin font-style($color, $fontSize, $fontWeight){
   color: $color;
   font-size: $fontSize;
   font-weight: $fontWeight;
 }
 
-@mixin center-aligner(){
+@mixin centerer(){
   text-align: center;
   text-align: -moz-center;
   text-align: -webkit-center;
   margin-left: auto;
   margin-right: auto;
+}
+
+//
+@mixin centerer2($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
 }
 
 @mixin right-aligner(){
