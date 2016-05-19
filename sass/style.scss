@@ -3,3 +3,373 @@
 @import "compass/css3";
 @import "compass/utilities";
 @import "include-media";
+
+* {
+	font-family: 'Raleway', sans-serif !important;
+	@include user-select(none);
+}
+
+// Android Keyboard and Android NavBar change the Viewport Heigh, therefore using this snippet is required
+.section, .top{
+	transition: height 999999s
+}
+
+.section{
+	@include center-aligner();
+}
+
+.top{
+	height: 72vh; 
+}
+
+.firstType{
+	@include section($red);
+	display:table-cell;
+	width: 100vw;
+	.sectionTop{	
+		display: table-cell;
+		vertical-align: bottom;
+	}
+	.sectionBottom{
+		margin-top: 6.5rem;
+		@include media("<=medium"){
+			margin-top: 3.5rem;
+		}
+		@include media("<=small"){
+			margin-top: 2.5rem;
+		}
+	}
+}
+
+.secondType{
+	@include section($lightGray);
+	.sectionTop{
+		@include media("<=very-small"){
+			height: 65vh
+		}
+	}
+	.sectionBottom{
+		margin-top: 1rem;
+		@include media("<=medium"){
+			margin-top: 0rem;
+		}
+	}
+}
+
+.thirdType{
+	@include section($white);
+	min-height: 50rem;
+	.sectionBottom{
+		margin-top: 7rem;
+	}
+}
+
+.fourthType{
+	@extend .thirdType;
+	@include section($lightGray);
+}
+
+.imageCenter{
+	width: 26rem;
+}
+
+.logoSubtitle{
+	@include font-style($lightGray, 2rem, 400);
+	letter-spacing: 1px;
+	line-height: 128%;
+	margin-top: 6rem;
+	margin-left: 30vw;
+	margin-right: 30vw;
+	@include media("<=large"){
+		margin-left: 25vw;
+		margin-right: 25vw;
+	}
+	@include media("<=medium"){
+		margin-left: 20vw;
+		margin-right: 20vw;
+	}
+	@include media("<=small"){
+		margin-left: 15vw;
+		margin-right: 15vw;
+	}
+	@include media("<=very-small"){
+		margin-left: 8vw;
+		margin-right: 8vw;
+	}
+}
+
+.drawing{
+	width: 48rem;
+	margin-top: 13rem;
+	@include media("<=medium"){
+		width: 44rem;
+	}
+	@include media("<=small"){
+		width: 38rem;
+		margin-top: 16rem;
+	}
+	@include media("<=very-small"){
+		width: 32rem;
+	}
+	@include media("<=480px"){
+		width: 28rem;
+	}
+}
+
+.drawingSubtitle{
+	@include font-style($darkGray, 2.9rem, 400);
+	letter-spacing: 0.4px;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	margin-top: 0;
+}
+
+strong{
+	font-weight: normal;
+	color: $red;
+}
+
+.scrollButton{
+	@include border-radius(25px);
+	@include ieCenterer();
+	background: url("../images/arrowDown.png") no-repeat center/35%;
+	width: 5rem;
+	height: 5rem;
+	border-style: solid;
+	border-width: 2px;
+	border-color: $lightGray;
+	cursor: pointer;
+	@include box-shadow($darkGray 1px 1px 20px -5px);
+	&:active{
+		@include box-shadow($darkGray 0px 0px 0px);
+	}
+}
+
+.redButton{
+	background-color: $red;
+	border-width: 3px;
+	width: 4.8rem;
+	height: 4.8rem;
+	margin-top: 3.1rem;
+}
+
+.blackButton{
+	background: url("../images/arrowDownBlack.png") no-repeat center/35%;
+	border-color: $darkGray;
+	border-width: 2.5px;
+	width: 4.8rem;
+	height: 4.8rem;
+}
+
+.titleWithMargin{
+	@include font-style($darkGray, 6.2rem, 400);
+	margin-top: 0;
+	padding-top: 4rem;
+	margin-bottom: 10.5rem;
+	@include media("<=circlesColliding"){
+		margin-bottom: 3rem;
+	}
+}
+
+.titleWithMargin.clients{
+	@extend .titleWithMargin;
+	@include media("<=circlesColliding"){
+		margin-bottom: 10.5rem;
+	}
+}
+
+.titleWithoutMargin{
+	@extend .titleWithMargin;
+	margin-bottom: 3rem;
+}
+
+.servicesContainer{
+	@include ieCenterer();
+	width: 77vw;
+	@include media("<=993px"){
+		width: 90vw;
+	}
+	@include media("<=circlesColliding"){
+		text-align: left;
+	}
+}
+
+.circle{
+	@include border-radius(20rem);
+	width: 14vw;
+	height: 14vw;
+	@include media("<=circlesColliding"){
+		width: 7.5rem;
+		height: 7.5rem;
+		display: inline-block;	
+		vertical-align: middle;
+		margin-bottom: 2rem;
+	}
+}
+
+.service1{
+	background: $red url("../images/service1.png") no-repeat center/44%;
+}
+.service2{
+	background: $red url("../images/service2.png") no-repeat center/44%;
+}
+.service3{
+	background: $red url("../images/service3.png") no-repeat center/44%;
+}
+.service4{
+	background: $red url("../images/service4.png") no-repeat center/44%;
+}
+
+.circleSubtitle{
+	@include font-style($darkGray, 2rem, 500);
+	@include opacity(0.8);
+	margin-top: 5rem;
+	@include media("<=circlesColliding"){
+		margin-top: 2rem;
+		display: inline-block;
+		vertical-align: super;
+		margin-left: 2.5rem;
+	}
+	@include media("<=360px"){
+		margin-left: 0.5rem;
+		@include font-style($darkGray, 1.7rem, 500);
+	}
+}
+.client{
+	@include filter(grayscale(100%) brightness(60%));
+	@include ieCenterer();
+	width: 18.5rem;
+	height: 18.5rem;
+	cursor: pointer;
+	&:hover{
+		@include filter(grayscale(0%) brightness(100%));
+	}
+}
+
+.client1{
+	background: url("../images/client1.png") no-repeat center/100%;
+	@include opacity(0.6);
+	&:hover{
+		@include opacity(1);
+	}
+}
+.client2{
+	background: url("../images/client2.png") no-repeat center/100%;
+}
+.client3{
+	background: url("../images/client3.png") no-repeat center/80%;
+}
+.client4{
+	background: url("../images/logo.png") no-repeat center/100%;
+}
+
+.owl-wrapper-outer{
+	z-index: 20;
+}
+.owl-buttons {
+	position: absolute !important;
+	top: 5.5rem !important;
+	width: 100%;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	@include media("<=large"){
+		padding-left: 1.5vw;
+		padding-right: 1.5vw;
+	}
+	@include media("<=medium"){
+		padding-left: 0vw;
+		padding-right: 0vw;
+	}
+	@include media("<=small"){
+		display: none;
+	}
+}
+
+.owl-prev {
+	font-size: 4rem !important;
+	font-weight: 600 !important;
+	color: gray !important;
+	background: none !important;
+	position: relative;
+	z-index: 40;
+	float: left;
+}
+
+.owl-next {
+	@extend .owl-prev;
+	float: right;
+}
+
+#mapTitle:before{
+	content: "How to find us";
+	@include media("<=very-small"){
+		content: "Find us";
+	}
+}
+
+.map-container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 85%;
+}
+.map-container:before, .map-container:after, #map:before, #map:after {
+	position: absolute;
+	display: block;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+	content: '';
+	z-index: 5;
+}
+.map-container:before {
+	top: -5px;
+	left: 0;
+	right: 0;
+	height: 5px;
+}
+.map-container:after {
+	right: -5px;
+	top: 0;
+	bottom: 0;
+	width: 5px;
+}
+#map:before{
+	bottom: -5px;
+	left: 0;
+	right: 0;
+	height: 5px;
+}
+#map:after{
+	left: -5px;
+	top: 0;
+	bottom: 0;
+	width: 5px;
+}
+
+#map{
+	width: inherit;
+	height: inherit;
+	background-color: #CCC;
+}
+
+.inputText, .inputTextArea{
+	@include formSize();
+	@include ieCenterer();
+	border: solid 2px darken($lightGray,15%);
+	background-color: darken($white,1%);
+	@include font-style($darkGray, 2rem, 500);
+	@include input-placeholder {
+		@include font-style($gray, 2rem, 400);
+	}
+}
+
+input:focus {
+	text-decoration: none !important;
+}
+
+.submitButton{
+	@include font-style($lightGray, 2rem, 400);
+	@include border-radius(5px);
+	@include formSize();
+	background-color: $red;
+	border: none;
+}
