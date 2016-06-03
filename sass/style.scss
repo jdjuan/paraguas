@@ -18,7 +18,7 @@ h1, h2, h3, h4{
 .window{
 	height: 100vh;
 	transition: height 999999s; 
-	background-color: #FFFFF3;
+	// background-color: #FFFFF3;
 	border: solid 1px;
 }
 
@@ -34,17 +34,68 @@ h1, h2, h3, h4{
 
 h1{
 	font-size: 12vmin;
-    padding: 3rem;
-    @include media("<=large"){
+	padding: 2rem;
+	@include media("<=large"){
 		font-size: 9vmin;
 	}
-    @include media("<=medium"){
+	@include media("<=medium"){
 		font-size: 10vmin;
 	}
-    @include media("<=small"){
+	@include media("<=small"){
 		font-size: 11vmin;
 	}
-    @include media("<=very-small"){
+	@include media("<=very-small"){
 		font-size: 12vmin;
+	}
+}
+
+.drawing1{
+	@include centerer();
+	background: #ffffff url("../images/d1.png") no-repeat center center;
+	background-size: 48%;
+	margin: 1rem auto 4rem auto;
+	height: 400px;
+	// border: 1px solid;
+	@include media("<1250px"){
+		background-size: 52%;
+	}
+	@include media("<1100px"){
+		background-size: 60%;
+	}
+	@include media("<1000px"){
+		background-size: 65%;
+	}
+	@include media("<900px"){
+		background-size: 75%;
+	}
+	@include media("<800px"){
+		background-size: 80%;
+	}
+	@include media("<750px"){
+		background-size: 90%;
+	}
+	@include media("<650px"){
+		background-size: 100%;
+	}
+	@include media("<650px"){
+		background-size: 100%;
+	}
+	@include media("<600px"){
+		background-size: 110%;
+	}
+	@include media("<550px"){
+		background-size: 120%;
+	}
+	@include media("<500px"){
+		height: 350px;
+	}
+	@include media("<400px"){
+		height: 300px;
+	}
+	@include media("<350px"){
+		height: 250px;
+	}
+    @include media("<600px", "retina2x"){
+		background-size: 110%;
 	}
 }

@@ -22,7 +22,6 @@ h1, h2, h3, h4 {
 .window {
   height: 100vh;
   transition: height 999999s;
-  background-color: #FFFFF3;
   border: solid 1px;
 }
 
@@ -43,7 +42,7 @@ h1, h2, h3, h4 {
 /* line 35, ../sass/style.scss */
 h1 {
   font-size: 12vmin;
-  padding: 3rem;
+  padding: 2rem;
 }
 @media (max-width: 1100px) {
   /* line 35, ../sass/style.scss */
@@ -67,5 +66,102 @@ h1 {
   /* line 35, ../sass/style.scss */
   h1 {
     font-size: 12vmin;
+  }
+}
+
+/* line 52, ../sass/style.scss */
+.drawing1 {
+  text-align: center;
+  text-align: -moz-center;
+  text-align: -webkit-center;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff url("../images/d1.png") no-repeat center center;
+  background-size: 48%;
+  margin: 1rem auto 4rem auto;
+  height: 400px;
+}
+@media (max-width: 1249px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    background-size: 52%;
+  }
+}
+@media (max-width: 1099px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    background-size: 60%;
+  }
+}
+@media (max-width: 999px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    background-size: 65%;
+  }
+}
+@media (max-width: 899px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    background-size: 75%;
+  }
+}
+@media (max-width: 799px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    background-size: 80%;
+  }
+}
+@media (max-width: 749px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    background-size: 90%;
+  }
+}
+@media (max-width: 649px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    background-size: 100%;
+  }
+}
+@media (max-width: 649px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    background-size: 100%;
+  }
+}
+@media (max-width: 599px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    background-size: 110%;
+  }
+}
+@media (max-width: 549px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    background-size: 120%;
+  }
+}
+@media (max-width: 499px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    height: 350px;
+  }
+}
+@media (max-width: 399px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    height: 300px;
+  }
+}
+@media (max-width: 349px) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    height: 250px;
+  }
+}
+@media (max-width: 599px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 599px) and (min-resolution: 192dpi) {
+  /* line 52, ../sass/style.scss */
+  .drawing1 {
+    background-size: 110%;
   }
 }
