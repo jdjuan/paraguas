@@ -3,14 +3,4 @@
 // Variables to quickly and easily change the accent colors across the site.
 $white: #FFF;
 
-// $media-expressions: (
-//   'screen': 'screen',
-//   'print': 'print',
-//   'handheld': 'handheld',
-//   'landscape': '(orientation: landscape)',
-//   'portrait': '(orientation: portrait)',
-//   'retina2x': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)',
-//   'retina3x': '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi)'
-// ) !default;
-
 $breakpoints: (very-small: 590px, small: 740px, medium: 900px, large: 1100px);

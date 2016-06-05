@@ -18,7 +18,6 @@ h1, h2, h3, h4{
 .window{
 	height: 100vh;
 	transition: height 999999s; 
-	// background-color: #FFFFF3;
 	border: solid 1px;
 }
 
@@ -51,7 +50,7 @@ h1{
 
 .drawing1{
 	@include centerer();
-	background: #ffffff url("../images/d1.png") no-repeat center center;
+	background: #ffffff url("../images/d1.jpg") no-repeat center center;
 	background-size: 48%;
 	margin: 1rem auto 4rem auto;
 	height: 400px;
