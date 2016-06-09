@@ -1,16 +1,17 @@
 module.exports = {
 	options:{
-		config: 'config.rb'
+		config: 'config.rb',
 	},
 	dev:{
 		options: {
 			watch: true,
-			environment: "production"
+			environment: 'production',
 		}
 	},
 	build: {
 		options: {
-			environment: "production"
+			environment: 'production',
 		}
+
 	}
 };
