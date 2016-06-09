@@ -1,0 +1,39 @@
+{
+  "name": "paraguas",
+  "version": "0.1.0",
+  "description": "Give an umbrella away when it is required the most",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdjuan/paraguas.git"
+  },
+  "keywords": [
+    "social",
+    "common",
+    "well",
+    "kindness"
+  ],
+  "author": "Juan Herrera",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdjuan/paraguas/issues"
+  },
+  "homepage": "https://github.com/jdjuan/paraguas#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-concurrent": "^2.3.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-newer": "^1.2.0",
+    "grunt-notify": "^0.4.5",
+    "jshint-stylish": "^2.2.0",
+    "load-grunt-config": "^0.19.2",
+    "load-grunt-tasks": "^3.5.0",
+    "time-grunt": "^1.3.0"
+  }
+}
