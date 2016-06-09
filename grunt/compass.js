@@ -4,12 +4,12 @@ module.exports = {
 	},
 	dev:{
 		options: {
+			watch: true,
 			environment: "production"
 		}
 	},
 	build: {
 		options: {
-			watch: true,
 			environment: "production"
 		}
 	}

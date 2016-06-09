@@ -1,12 +1,12 @@
 default:
   - 'concurrent:first'
 
-test:
+dev:
   - 'newer:jshint:dev'
   - 'newer:uglify:dev'
   - 'newer:compass:dev'
 
 build:
-  - 'newer:jshint:build'
-  - 'newer:uglify:build'
-  - 'newer:compass:build'
+  - 'jshint:build'
+  - 'uglify:build'
+  - 'compass:build'
