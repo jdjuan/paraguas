@@ -1,12 +1,9 @@
 default:
   - 'concurrent:first'
-
-dev:
-  - 'newer:jshint:dev'
-  - 'newer:uglify:dev'
-  - 'newer:compass:dev'
+  - 'concurrent:second'
 
 build:
   - 'jshint:build'
-  - 'uglify:build'
+  - 'uglify'
   - 'compass:build'
+  - 'htmlmin'
