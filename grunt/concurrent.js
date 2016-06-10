@@ -1,5 +1,5 @@
 module.exports = {
-	first: ['compass:dev','watch'],
+	first: ['connect','watch', 'compass:dev'],
 	options: {
 		logConcurrentOutput: true
 	}

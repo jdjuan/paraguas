@@ -6,8 +6,15 @@ module.exports = {
 			spawn: false
 		},
 	},
+	html: {
+		files: ['index.html'],
+		tasks: ['htmlmin'],
+		options: {
+			spawn: false
+		},
+	},
 	livereload: {
 		options: { livereload: true },
-		files: ['stylesheets/*'],
+		files: ['build/**/*{css,js,jpg,png,html}'],
 	},
 };
