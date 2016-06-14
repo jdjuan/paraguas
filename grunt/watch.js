@@ -1,13 +1,14 @@
 module.exports = {
 	scripts: {
 		files: ['javascripts/*.js'],
-		tasks: ['jshint:dev', 'uglify:dev'],
+		tasks: ['jshint:dev', 'uglify'],
 		options: {
-			spawn: false
+			spawn: false,
+			livereload: true
 		},
 	},
 	livereload: {
 		options: { livereload: true },
-		files: ['build/**/*{css,js}','index.html','images/*.{jpg,png}'],
+		files: ['index.html','images/**','build/stylesheets/*'],
 	},
 };
