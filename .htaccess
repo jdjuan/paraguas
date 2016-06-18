@@ -1,6 +1,7 @@
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+AddType 'text/html; charset=utf-8' html
 
 # ----------------------------------------------------------------------
 # | Compression                                                        |
@@ -56,3 +57,4 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 <IfModule mod_headers.c>
      Header set Cache-Control "max-age=290304000, no-cache"
 </IfModule>
+
