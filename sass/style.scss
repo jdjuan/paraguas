@@ -8,9 +8,7 @@
 
 * {
 	@include user-select(none); 
-	// color: slategray;
-	
-	color: dimgray;
+	// color: dimgray;
 }
 
 // Android Keyboard and Android NavBar change the Viewport Heigh, therefore using this snippet is required
@@ -63,17 +61,15 @@ h1, h2{
 }
 
 h2{
-	margin: 3rem;
+	padding-top: 3rem;
 	margin-bottom: 8rem; 
 	font-size: 10vmin;
 	@include media("<=large"){
 		font-size: 8vmin;
-		margin-top: 2rem;
 		margin-bottom: 5rem; 
 	}
 	@include media("<=medium"){
 		font-size: 9vmin;
-		margin-top: 1rem;
 		margin-bottom: 4rem; 
 	}
 	@include media("<=small"){
@@ -171,16 +167,16 @@ h3{
 	border: 2px solid;
 	width: 4rem;
 	height: 4rem;
-    left: -50%;
-    position: relative;
-    cursor: pointer;
+	left: -50%;
+	position: relative;
+	cursor: pointer;
 
 	&:active{
 		@include box-shadow(#c4c4c4 0px 0px 0px);
 	}
 }
 
-.pasos{
+.steps{
 	margin-top: 1rem;
 	@include media("<=small"){
 		margin-top: 0rem;
@@ -195,11 +191,11 @@ h3{
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 66%;
-    display: inline-block;
-    height: 80px;
-    width: 80px;
-    margin: 0;
-    margin-bottom: 1rem;
+	display: inline-block;
+	height: 80px;
+	width: 80px;
+	margin: 0;
+	margin-bottom: 1rem;
 	@include media("<=medium"){
 		display: block;
 		margin-bottom: 0rem;
@@ -224,4 +220,53 @@ h3{
 	@include media("<=small"){
 		background-size: 60%;
 	}
+}
+
+.window.fourth{
+	display: none;
+}
+
+.fields{
+	display: table-cell;
+	padding-right: 5rem;
+}
+
+.submitSection{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.field{
+	font-weight: initial;
+	font-size: 2rem;
+	margin: 2rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    bottom: 42px;
+    width: 100%;
+    .footbar{
+    	border-top: 1px solid;
+    	padding-top: 0.9rem;
+    	height: 4rem;
+    }
+    .copyright{
+    	position: relative;
+    	border-top: 1px solid;
+    	.left, .right, .center{
+			position: absolute;
+    	}
+    	.center{
+    		left: 0;
+    		right: 0;
+    	}
+    	.left{
+    		left: 10px;
+    	}
+    	.right{
+    		right: 10px;
+    	}
+    }
 }
