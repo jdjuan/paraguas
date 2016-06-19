@@ -8,6 +8,9 @@
 
 * {
 	@include user-select(none); 
+	// color: slategray;
+	
+	color: dimgray;
 }
 
 // Android Keyboard and Android NavBar change the Viewport Heigh, therefore using this snippet is required
@@ -23,8 +26,8 @@ p{
 
 .window{
 	height: 100vh;
-	transition: height 999999s; 
-	// border: solid 1px;
+	position: relative;
+	// transition: height 999999s; 
 	@include centerer();
 }
 
@@ -60,31 +63,54 @@ h1, h2{
 }
 
 h2{
-	padding: 2rem;
+	margin: 3rem;
+	margin-bottom: 8rem; 
 	font-size: 10vmin;
 	@include media("<=large"){
-		font-size: 7vmin;
+		font-size: 8vmin;
+		margin-top: 2rem;
+		margin-bottom: 5rem; 
 	}
 	@include media("<=medium"){
-		font-size: 8vmin;
+		font-size: 9vmin;
+		margin-top: 1rem;
+		margin-bottom: 4rem; 
 	}
 	@include media("<=small"){
-		font-size: 9vmin;
+		font-size: 10vmin;
+		margin-bottom: 3rem; 
 	}
 	@include media("<=very-small"){
-		font-size: 12vmin;
+		font-size: 13vmin;
+		margin-bottom: 2rem; 
 	}
 }
 
 h3{
 	display: inline-block;
+	font-size: 2rem;
+	@include media("<400px"){
+		font-size: 1.8rem;
+	}
+	@include media("<350px"){
+		font-size: 1.5rem;
+	}
+	@include media("<300px"){
+		font-size: 1.2rem;
+	}
 }
 
 .drawing1{
 	background: #ffffff url("../../images/d1.jpg") no-repeat center center;
-	background-size: 48%;
+	background-size: 40%;
 	margin: 0;
 	height: 430px;
+	@include media("<1560px"){
+		background-size: 43%;
+	}
+	@include media("<1460px"){
+		background-size: 48%;
+	}
 	@include media("<1360px"){
 		height: 410px;
 	}
@@ -132,15 +158,23 @@ h3{
 	margin-bottom: 1.5rem;
 }
 
+.scrollerContainer{
+	position: absolute;
+	left: 50%;
+	bottom: 3rem;
+}
+
 .scroller {
 	@include border-radius(4rem);
 	@include box-shadow(#c4c4c4 4px 4px 10px);
+	padding-top: 0.3rem;
 	border: 2px solid;
-	display: inline-block;
-	width: 3.5rem;
-	height: 3.5rem;
-	margin: 0 auto;
-	cursor: pointer; 
+	width: 4rem;
+	height: 4rem;
+    left: -50%;
+    position: relative;
+    cursor: pointer;
+
 	&:active{
 		@include box-shadow(#c4c4c4 0px 0px 0px);
 	}
@@ -162,8 +196,8 @@ h3{
 	background-position: center center;
 	background-size: 66%;
     display: inline-block;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     margin: 0;
     margin-bottom: 1rem;
 	@include media("<=medium"){
