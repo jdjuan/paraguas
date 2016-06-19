@@ -4,7 +4,6 @@ $(function(){
 
 	// jQuery Function to make the actual scrolling
 	function animateScroll(elementClass){
-		console.log(elementClass);
 		$('html,body').animate({scrollTop: $("."+elementClass).offset().top},
 			1000, function(){
 				setTimeout(function(){
@@ -15,7 +14,6 @@ $(function(){
 
 	// Scroll Buttons assigned function
 	$(".scroller").click(function() {
-		console.log("Entra");
 		if (!scrolling) {
 			scrolling = true;
 			animateScroll($(this).attr("data-number"));

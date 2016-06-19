@@ -16,6 +16,7 @@ h1, h2, h3, h4{
 	@include centerer();
 	font-family: 'Raleway', sans-serif !important;
 }
+
 p{
 	font-family: 'Raleway', sans-serif !important;
 }
@@ -23,7 +24,7 @@ p{
 .window{
 	height: 100vh;
 	transition: height 999999s; 
-	border: solid 1px;
+	// border: solid 1px;
 	@include centerer();
 }
 
@@ -75,8 +76,12 @@ h2{
 	}
 }
 
+h3{
+	display: inline-block;
+}
+
 .drawing1{
-	background: #ffffff url("../images/d1.jpg") no-repeat center center;
+	background: #ffffff url("../../images/d1.jpg") no-repeat center center;
 	background-size: 48%;
 	margin: 0;
 	height: 430px;
@@ -138,5 +143,51 @@ h2{
 	cursor: pointer; 
 	&:active{
 		@include box-shadow(#c4c4c4 0px 0px 0px);
+	}
+}
+
+.pasos{
+	margin-top: 1rem;
+	@include media("<=small"){
+		margin-top: 0rem;
+		margin-bottom: 2rem;
+	}
+	padding: 0rem 2rem 0rem 2rem;
+}
+
+.numberOne, .numberTwo, .numberThree{
+	vertical-align: middle;
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 66%;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    margin-bottom: 1rem;
+	@include media("<=medium"){
+		display: block;
+		margin-bottom: 0rem;
+	}
+	@include media("<=small"){
+		background-size: 55%;
+	}
+}
+
+.numberOne{
+	background-image: url("../../images/numberOne.jpg");
+	background-size: 80%;
+	@include media("<=small"){
+		background-size: 65%;
+	}
+}
+.numberTwo{
+	background-image: url("../../images/numberTwo.jpg");
+}
+.numberThree{
+	background-image: url("../../images/numberThree.jpg");
+	@include media("<=small"){
+		background-size: 60%;
 	}
 }
