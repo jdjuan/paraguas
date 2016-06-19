@@ -2,9 +2,12 @@
 <html>
 <head>
 	<title>Paraguas: Regala uno cuando más se necesita</title>
+	<!-- Viewport for different devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+	<!-- Meta Description for SEO -->
 	<meta name="description" content="Paraguas es un proyecto social que incentiva a las personas a regalar un paraguas a aquel que no tiene uno, justo cuando más lo necesita"/>
+	<!-- Open Graph Protocol Meta Information -->
 	<meta property="og:title" content="Paraguas" />
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="Regala uno cuando más se necesita" />
@@ -18,21 +21,28 @@
 	<link rel='stylesheet' href='build/stylesheets/style.css' type='text/css' media='screen' />
 	<!-- App styles	 -->
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600' rel='stylesheet' type='text/css'>
+	<!-- FontAwesome Icons -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- <script src="https://use.fontawesome.com/90ef4a58d7.js"></script> -->
 	<!-- Jquery CDN -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" defer></script>
 	<!-- Custom Javascript -->
 	<script src="build/javascripts/build.min.js" defer></script> 
 </head>
 <body>
-	<section class="window">
+	<section class="window first">
 		<header>
 			<span class="language"><a href="#">English Version</a></span>
 			<h1>Paraguas</h1>
 		</header>
 		<div class="drawing1"></div>
-		<p>Paraguas es un proyecto social que incentiva a las personas a regalar un paraguas a aquel que no tiene uno, justo cuando más lo necesita</p>
+		<!-- <p class="description">Paraguas es un proyecto social que incentiva a las personas a regalar un paraguas a aquel que no tiene uno, justo cuando más lo necesita</p> -->
+		<p class="description">Regala un <b>paraguas</b> a aquel que no tiene uno, <b>justo cuando más lo necesita</b></p>
+		<div data-number="second" class="scroller">
+			<i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+		</div>
 	</section>
-	<section class="window">
+	<section class="window second">
 		<h2>Pasos</h2>
 		<div class="pasos">
 			<img src="" alt="Adquiere un paraguas extra">
@@ -82,6 +92,7 @@
 		<div class="navbar">
 			<a href="#">Preguntas Frecuentes</a>
 			<a href="#">Contacto</a>
+			<a href="#">Quién soy</a>
 			<a href="#">Acerca de</a>
 		</div>
 		<div class="copyright">
@@ -94,5 +105,4 @@
 		</div> 
 	</footer>
 </body>
-<!-- <noscript><link rel="stylesheet" href="build/stylesheet/style.css" type='text/css' media='screen'></noscript> -->
 </html>
