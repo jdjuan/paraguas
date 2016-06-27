@@ -243,30 +243,46 @@ h3{
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    bottom: 42px;
-    width: 100%;
-    .footbar{
-    	border-top: 1px solid;
-    	padding-top: 0.9rem;
-    	height: 4rem;
-    }
-    .copyright{
-    	position: relative;
-    	border-top: 1px solid;
-    	.left, .right, .center{
+	position: absolute;
+	bottom: 0;
+	bottom: 4px;
+	width: 100%;
+	.footbar{
+		border-top: 1px solid;
+		padding: 1rem;
+		@include media("<=450px"){
+			padding: 0.5rem;
+		}
+	}
+	.copyright{
+		position: relative;
+		border-top: 1px solid;
+		padding-top: 0.6rem;
+		.right{
 			position: absolute;
-    	}
-    	.center{
-    		left: 0;
-    		right: 0;
-    	}
-    	.left{
-    		left: 10px;
-    	}
-    	.right{
-    		right: 10px;
-    	}
-    }
+			right: 10px;
+			top: 6px;
+			@include media("<=medium"){
+				position: static;
+			}
+		}
+	}
+}
+.icons{
+	@include media("<=450px"){
+		display: block;
+	}
+}
+
+.footbar{
+	a{
+		@include media("<=450px"){
+			display: block;
+		}
+	}
+	span{
+		@include media("<=450px"){
+			display: none;
+		}	
+	}
 }
