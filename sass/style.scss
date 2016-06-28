@@ -227,8 +227,7 @@ h3{
 }
 
 .fields{
-	display: table-cell;
-	padding-right: 5rem;
+	display: inline-block;
 }
 
 .submitSection{
@@ -236,10 +235,33 @@ h3{
 	vertical-align: middle;
 }
 
+fieldset{
+	position: relative;
+	margin: 2rem;
+	i{
+		position: absolute;
+		top: 2px;
+		left: 5px;
+	}
+	i.fa-user{
+		left:9px;
+	}
+}
+
 .field{
 	font-weight: initial;
 	font-size: 2rem;
 	margin: 2rem;
+}
+
+.inputField{
+	font-family: "Raleway";
+	width: 45rem;
+	padding-left: 4.5rem;
+	font-size: 2.4rem;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid;
 }
 
 footer {
